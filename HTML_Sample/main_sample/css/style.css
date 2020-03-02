@@ -1,0 +1,251 @@
+@charset 'UTF-8';
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* リスト調整 */
+ul, ol {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    /* list-style: none; */
+}
+
+/* リストスタイルサンプル */
+ul {
+    /* list-style-type: disc; */
+    /* list-style-type: circle; */
+    /* list-style-type: decimal; */
+}
+
+.content-warp {
+    width: 980px;
+    margin: 0 auto 60px;
+}
+
+.content {
+    margin-bottom: 30px;
+    padding: 15px 15px 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.heading {
+    margin: 15px 0;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.page-title {
+    font-size: 2.4rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.section-title {
+    font-size: 1.8rem;
+}
+
+.section-title::before {
+    content: '●';
+    display: inline;
+    font-size: 1.8rem;
+}
+
+.block-box {
+    /* display: inline; */
+    margin: 0 auto;
+    width: 250px;
+    height: 180px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    line-height: 180px;
+}
+
+.block-box:nth-child(even) {
+    background: #bf2d2d;
+}
+.block-box:nth-child(odd) {
+    background: #5fc6cc;
+}
+
+.green-bg {
+    background: #3aad3c;
+    color: #fff;
+}
+
+.blue-bg {
+    background: #3c65e0;
+    color: #fff;
+}
+
+.pattern li:nth-child(odd) {
+    background: #eee;
+}
+
+.images img {
+    width: 45%;
+    border: 1px solid #ccc;
+}
+
+.bg-img-box {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    background: url(../img/hwt_basic_02.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: purple;
+}
+
+.btn {
+    width: 260px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.btn-blue {
+    background: #3c65e0;
+}
+
+.btn-blue:hover {
+    opacity: 0.8;
+}
+
+.btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ==============
+    表の外枠
+================*/
+
+.sample-table1 {
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.sample-table2,
+.sample-table3,
+.full-tag-table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+/* 各セルの枠 */
+.sample-table1 th,
+.sample-table1 td,
+.sample-table2 th,
+.sample-table2 td,
+.sample-table3 th,
+.sample-table3 td,
+.full-tag-table th,
+.full-tag-table td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+.sample-table3 th {
+    table-layout: fixed;
+    width: 300px;
+}
+
+.full-tag-table {
+    width: 50%;
+}
+
+.full-tag-table tbody tr:nth-child(odd) {
+    background: #efefef;
+}
+
+.full-tag-table th {
+    table-layout: fixed;
+    width: 25%;
+}
+
+/* =================
+セマンティック用
+================== */
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.site-header {
+    margin-bottom: 30px;
+    background: skyblue;
+}
+
+.site-title {
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.g-nav {
+    margin: 0;
+    list-style: none;
+}
+
+.g-nav::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.g-nav li {
+    width: 250px;
+    float: left;
+    padding: 8px;
+    border:1px solid #3c65e0;
+    text-align: center;
+}
+
+.article-title {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc ;
+}
+
+.article-section-title {
+    font-size: 20px;
+}
+
+.links {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.site-footer {
+    padding: 30px;
+    background: #efefef;
+    text-align: center;
+}

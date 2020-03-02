@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>table | HTML Sample</title>
+    <meta name="description" content="HTMLとCSSのサンプルサイトです。">
+    <meta name="keywords" content="HTML,CSS,javascript,HTMLの基本">
+    <meta name="author" content="Ryosuke Someya">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="content">
+        <h1 class="heading section-title">Table(表組)</h1>
+        <p>かつてはレイアウトのために使われることがあったが、現在は<strong>ご法度</strong>。</p>
+        <p>基本的な表組み(リセットなし)</p>
+        <ul>
+            <li>各セルにはデフォルトで微妙な隙間がある。</li>
+        </ul>
+        <table class="sample-table1">
+            <tr>
+                <th>表見出し1</th>
+                <th>表見出し2</th>
+                <th>表見出し3</th>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル２</td>
+                <td>セル３</td>
+            </tr>
+            <tr>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li>CSSでborder-collapseを使うことで、セル間の隙間をなくす事もできる。<br>
+                <ul>
+                    <li>セルの隙間がある状態: separate(デフォルト)</li>
+                    <li>セルの隙間がない状態: collapse</li>
+                </ul>
+            </li>
+            <li>tableはセルの内容に応じで自動で幅が調整される</li>
+        </ul>
+        <table class="sample-table2">
+            <tr>
+                <th>表見出し1</th>
+                <th>表見出し2</th>
+                <th>表見出し3</th>
+                <th>表見出し4</th>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル２</td>
+                <td>セル３</td>
+            </tr>
+            <tr>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+                <td>セル6 セル6 セル6</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li>セルの幅を固定することでセルの幅を独自に指定することで、読み込み時の計算量が減り表示が早くなると言われている。</li>
+            <li>指定がない場合は表全体の内容を読み取ってから、表のサイズを計算している。</li>
+        </ul>
+        <table class="sample-table3">
+            <tr>
+                <th>表見出し1</th>
+                <th>表見出し2</th>
+                <th>表見出し3</th>
+                <th>表見出し4</th>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル２</td>
+                <td>セル３</td>
+            </tr>
+            <tr>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+                <td>セル6 セル6 セル6</td>
+            </tr>
+        </table>
+
+        <p>列・行の結合</p>
+        <ul>
+            <li>列を結合 colspan属性（column span）</li>
+            <li>行を結合 rowspan属性</li>
+            <li>それぞれの属性の値に結合したいセル、または行の数値を入力</li>
+        </ul>
+        <table class="sample-table3">
+            <tr>
+                <th>表見出し1</th>
+                <th>表見出し2</th>
+                <th>表見出し3</th>
+                <th>表見出し4</th>
+            </tr>
+            <tr>
+                <td colspan="3">セル1(colspan指定)</td>
+                <td>セル２</td>
+                <td>セル３</td>
+            </tr>
+            <tr >
+                <td rowspan="2">セル4(rowspan指定)</td>
+                <td>セル5</td>
+                <td>セル6</td>
+                <td>セル7 セル7 セル7</td>
+            </tr>
+            <tr >
+                <td>セル4</td>
+                <td>セル5</td>
+                <td>セル6</td>
+                <td>セル7 セル7 セル7</td>
+            </tr>
+        </table>
+
+        <p>HTML5のテーブル関連のタグをフルで使用した例</p>
+        <table class="full-tag-table">
+            <caption>【tableのキャプション】</caption>
+            <thead>
+                <tr>
+                    <th>見出し1</th>
+                    <th>見出し2</th>
+                    <th>見出し3</th>
+                    <th>見出し4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1行目 セル内容1</td>
+                    <td>1行目 セル内容2</td>
+                    <td>1行目 セル内容3</td>
+                    <td>1行目 セル内容4</td>
+                </tr>
+                <tr>
+                    <td>2行目 セル内容1</td>
+                    <td>2行目 セル内容2</td>
+                    <td>2行目 セル内容3</td>
+                    <td>2行目 セル内容4</td>
+                </tr>
+                <tr>
+                    <td>3行目 セル内容1</td>
+                    <td>3行目 セル内容2</td>
+                    <td>3行目 セル内容3</td>
+                    <td>3行目 セル内容4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">table内フッター</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    <div class="btn btn-blue">
+        <a href="./semantic.html">セマンティックへ</a>
+    </div>
+    <!-- javascriptは読み込みと同時に使わないので最後に読み込ませています。 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="sample.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+@charset 'UTF-8';
+
+/* 基本のフォントスタイル、サイズ、行間の指定 */
+html {
+    height: 100%;
+    font-size: 62.5%;
+    /*
+        ブラウザの標準文字サイズ(クロームは16px)
+        の62.5% => 大体のブラウザで10px
+    */
+}
+body {
+    color: #333;
+    font-family: sans-serif;
+    font-size: 1.4rem; /* ルートの要素(html要素)の1.4倍のサイズ */
+    line-height: 1.4;
+}
+
+/*
+    すべての要素の幅、高さにpadding,borderを含める
+    => 計算が楽
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* リンクのリセット */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 画像は親要素の100%のサイズにする */
+img {
+    width: 100%;
+    vertical-align: bottom; /* 謎の隙間防止 */
+}
+
+/* clearfix */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 共通のスタイル */
+.content-inner {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.main-conteiner {
+    width: 70%;
+    float: left;
+}
+
+.side-menu {
+    width: 28%;
+    float: right;
+}
+
+/* スマホ用メニュー用 */
+.sp-title {
+    display: none;
+}
+
+.sp-display {
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+/* ==================================================
+    ブラウザ幅がiPadより小さい時(〜768pxまで)
+====================================================*/
+@media screen and (max-width: 768px) {
+    .pc-display {
+        display: block;
+    }
+
+    .content-inner {
+        width: 100%;
+    }
+
+    /* .sp-display {
+        display: block;
+    } */
+
+    .main-conteiner {
+        width: 100%;
+        float: none;
+        padding: 0 15px;
+    }
+
+    .side-menu {
+        width: 100%;
+        float: none;
+    }
+}
+/* ==================================================
+    ブラウザ幅がスマホサイズの時(〜375pxまで)
+====================================================*/
+@media screen and (max-width: 375px) {
+    .sp-title {
+        display: block;
+    }
+
+    .pc-display {
+        display: none;
+    }
+
+    .pc-title {
+        display: none;
+    }
+
+    .sp-menu-button {
+        display: block;
+        cursor: pointer;
+    }
+}
+/* ==================================================== */
+
+
+/* pagetopボタン */
+.page-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 8px;
+    background: #efefef;
+    font-size: 3rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ヘッダー */
+.header {
+    margin-bottom: 30px;
+    padding: 15px 10px 0;
+    border-bottom: 1px solid #cfcfcf;
+    box-shadow:0px -1px 7px 5px #efefef;
+}
+
+.site-title {
+    margin-bottom: 15px;
+    padding: 12px 0;
+    font-size: 3.2rem;
+    font-weight: bold;
+    /* font-style: italic; */
+}
+
+/* ==================================================
+    header周りブラウザ幅がiPadより小さい時(〜768pxまで)
+====================================================*/
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 0 0;
+    }
+    .site-title {
+        text-align: center;
+    }
+}
+
+/* ==================================================
+    header周りブラウザ幅がスマホより小さい時(〜768pxまで)
+====================================================*/
+
+@media screen and (max-width: 375px) {
+    .header {
+        padding: 0;
+    }
+
+    .site-title {
+        margin-left: 15px;
+        padding-bottom: 0;
+        font-size: 2.4rem;
+        text-align: left;
+    }
+
+    .sp-menu-button {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        /* padding: 8px; */
+        line-height: 40px;
+        border: 2px solid #efefef;
+        border-radius: 4px;
+        text-align: center;
+    }
+}
+/* ====================================================*/
+
+/* グローバルナビ */
+.g-nav-list {
+    display: flex;
+}
+
+.g-nav-list-item {
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #ccc ;
+}
+
+/* ==================================================
+    グローバルナビ:ブラウザ幅がiPadより小さい時(〜768pxまで)
+====================================================*/
+@media screen and (max-width: 768px) {
+    .g-nav-list {
+        flex-wrap:wrap;
+    }
+
+    .g-nav-list-item {
+        width: 50%;
+        text-align: center;
+        border: 1px solid #ccc ;
+    }
+}
+/* =====================================================*/
+
+.g-nav-list-item:last-child {
+    border-right: none;
+}
+
+.g-nav-list-item a {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    transition: transform 0.8s linear;
+}
+
+.g-nav-list-item a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+.g-nav-list-item a:hover {
+    background: #efefef;
+}
+
+.g-nav-list-item a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* スマホ用メニュー */
+.sp-menu-list-item {
+    text-align: center;
+    border-bottom: 1px dashed #ccc ;
+}
+
+.sp-menu-list-item:first-child {
+    border-top: 1px dashed #ccc;
+}
+
+.sp-menu-list-item:last-child {
+    border-bottom: none;
+}
+
+.sp-menu-list-item a {
+    display: block;
+    padding: 12px;
+    width: 100%;
+    font-size: 20px;
+}
+
+/* メインコンテンツ */
+.section-title {
+    margin-bottom: 15px;
+    padding: 8px 0;
+    border-bottom: 2px solid #cfcfcf;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+/* 最新記事のサムネイルレイアウト */
+.newest-contents {
+    margin-bottom: 30px;
+}
+
+.newest-contents-item {
+    display: block;
+    width: 48%;
+    margin-bottom: 12px;
+}
+
+.newest-contents-item__thmbnail {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.newest-contents-item:hover .newest-contents-item__article-title {
+    text-decoration: underline;
+    color: #00f;
+}
+
+.newest-contents-item:hover .newest-contents-item__thmbnail img {
+    transition: transform 0.2s linear;
+    transform: scale(1.1, 1.1);
+}
+
+/* 奇数番目のものは左寄せ */
+.newest-contents-item:nth-child(odd) {
+    float: left;
+}
+
+/* 偶数番目のものは左寄せ */
+.newest-contents-item:nth-child(even) {
+    float: right;
+}
+
+.newest-contents-item__article-title {
+    font-size: 1.8rem;
+}
+
+/* ==================================================
+    最新記事レイアウト
+    ブラウザ幅がスマホサイズの時(〜375pxまで)
+====================================================*/
+@media screen and (max-width: 375px) {
+    /* 幅を親要素いっぱいにする */
+    .newest-contents-item {
+        width: 100%;
+    }
+    /* 左寄せ解除 */
+    .newest-contents-item:nth-child(odd) {
+        float: none;
+    }
+    /* 右寄せ解除 */
+    .newest-contents-item:nth-child(even) {
+        float: none;
+    }
+}
+/* ================================================== */
+
+/* 記事一覧 */
+.article-list-thumb {
+    display: inline-block;
+    width: 20%;
+}
+
+.article-list-content__list {
+    margin-bottom: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+}
+.article-list-content {
+    display: inline-block;
+    width: 75%;
+    margin: 0 0 1.4rem 1.4rem;
+    vertical-align: top;
+}
+
+.article-list-content__title {
+    margin-bottom: 1.4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.article-list-content__leadtxt {
+    line-height: 1.6;
+}
+
+.article-list-content-link:hover .article-list-content__title {
+    color: #00f;
+    text-decoration: underline;
+}
+
+/* ==================================================
+    記事一覧
+    ブラウザ幅がスマホサイズの時(〜375pxまで)
+====================================================*/
+@media screen and (max-width: 375px) {
+    .article-list-thumb {
+        display: none;
+    }
+
+    .article-list-content {
+        width: 100%;
+        margin: 0;
+    }
+}
+/* ================================================== */
+
+/* サイドメニュー */
+.side-menu {
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow:0px -1px 7px 5px #efefef;
+}
+
+.side-menu-title {
+    margin-bottom: 12px;
+    padding: 4px 8px;
+    border-left: 4px solid #ccc ;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.side-menu-content-title {
+    margin-bottom: 12px;
+    padding: 4px 8px;
+    background: #aaa;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.popular-list,
+.category-list {
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.popular-list li {
+    margin-bottom: 8px;
+    padding: 8px 4px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.popular-list li a:hover {
+    color: #00f;
+}
+
+.category-list li {
+    margin-bottom: 8px;
+    padding: 8px 4px;
+    background: #ffc36a;
+}
+
+.category-list li a {
+    color: #fff;
+}
+
+.category-list li:hover {
+    background: #c4790a;
+}
+
+/* ==================================================
+    サイドメニュー周り
+    ブラウザ幅がiPadより小さい時(〜768pxまで)
+====================================================*/
+@media screen and (max-width: 768px) {
+    /* 背景の効果を無効にする */
+    .side-menu {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    /* 人気記事のリストを一列で２つにする */
+    .popular-list li {
+        display: block;
+        width: 50%;
+        padding: 20px;
+    }
+    .category-list li {
+        display: block;
+        width: 49%;
+        padding: 20px;
+    }
+
+    /* 奇数番目のliを左寄せ */
+    .popular-list li:nth-child(odd),
+    .category-list li:nth-child(odd) {
+        float: left;
+        border-right: 1px dashed #ccc;
+    }
+
+    /* 偶数番目のliを右寄せ */
+    .popular-list li:nth-child(even),
+    .category-list li:nth-child(even) {
+        float: right;
+    }
+}
+/* ====================================================*/
+
+/* フッター */
+.footer {
+    margin-top: 60px;
+    padding: 30px 10px;
+    background: #cfcfcf;
+    text-align: center;
+}

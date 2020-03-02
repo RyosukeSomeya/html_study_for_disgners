@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Responsive Sample</title>
+    <meta name="description" content="レスポンシブデザインのサンプルサイトです。">
+    <meta name="keywords" content="HTML,CSS,javascript,HTMLの基本">
+    <meta name="author" content="Ryosuke Someya">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <header class="header" id="pageTop">
+            <div class="content-inner">
+                <!-- PC,タブレット用タイトル -->
+                <h1 class="site-title pc-title"><a href="#">Responsive Sample Site</a></h1>
+                <!-- スマホ用タイトル -->
+                <h1 class="site-title sp-title"><a href="#">Responsive Sample<br>Site</a></h1>
+
+                <!-- PC,タブレット用グローバルメニュー -->
+                <nav class="g-nav pc-display">
+                    <ul class="g-nav-list">
+                        <li class="g-nav-list-item"><a href="#">TOP</a></li>
+                        <li class="g-nav-list-item"><a href="#">NEW</a></li>
+                        <li class="g-nav-list-item"><a href="#">ABOUT</a></li>
+                        <li class="g-nav-list-item"><a href="#">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- スマホ用グローバルメニュー -->
+                <div id="menu-trigger" class="sp-menu-button sp-display">
+                    menu
+                </div>
+                <nav class="hidden">
+                    <ul class="sp-menu-list">
+                        <li class="sp-menu-list-item"><a href="#">TOP</a></li>
+                        <li class="sp-menu-list-item"><a href="#">NEW</a></li>
+                        <li class="sp-menu-list-item"><a href="#">ABOUT</a></li>
+                        <li class="sp-menu-list-item"><a href="#">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="content-inner clearfix">
+            <main class="main-conteiner">
+                <!-- メインコンテナ -->
+                <section class="newest-contents">
+                    <h1 class="section-title">最新記事</h1>
+                    <!-- サムネ -->
+                    <div class="newest-contents clearfix">
+                        <a href="#" class="newest-contents-item">
+                            <dl>
+                                <dd class="newest-contents-item__thmbnail"><img src="img/green_lake.jpg" alt="最新記事サムネ"></dd>
+                                <dt class="newest-contents-item__article-title">最新記事1</dt>
+                            </dl>
+                        </a>
+                        <a href="#" class="newest-contents-item">
+                            <dl>
+                                <dd class="newest-contents-item__thmbnail"><img src="img/green_lake.jpg" alt="最新記事サムネ"></dd>
+                                <dt class="newest-contents-item__article-title">最新記事2</dt>
+                            </dl>
+                        </a>
+                        <a href="#" class="newest-contents-item">
+                            <dl>
+                                <dd class="newest-contents-item__thmbnail"><img src="img/green_lake.jpg" alt="最新記事サムネ"></dd>
+                                <dt class="newest-contents-item__article-title">最新記事3</dt>
+                            </dl>
+                        </a>
+                        <a href="#" class="newest-contents-item">
+                            <dl>
+                                <dd class="newest-contents-item__thmbnail"><img src="img/green_lake.jpg" alt="最新記事サムネ"></dd>
+                                <dt class="newest-contents-item__article-title">最新記事4</dt>
+                            </dl>
+                        </a>
+                    </div>
+                </section>
+                <section class="recent-contents">
+                    <h1 class="section-title">記事一覧</h1>
+                    <section class="recent-contents-body">
+                        <ul>
+                            <a href="#" class="article-list-content-link">
+                                <li class="article-list-content__list">
+                                    <img src="img/blue_sky.jpg" alt="サムネイル" class="article-list-thumb">
+                                    <dl class="article-list-content">
+                                        <dt class="article-list-content__title">記事タイトル1</dt>
+                                        <dd class="article-list-content__leadtxt">
+                                            リード文1リード文1リード文1リード文1リード文1リード文1
+                                            リード文1リード文1リード文1リード文1リード文1
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </a>
+                            <a href="#" class="article-list-content-link">
+                                <li class="article-list-content__list">
+                                    <img src="img/blue_sky.jpg" alt="サムネイル" class="article-list-thumb">
+                                    <dl class="article-list-content">
+                                        <dt class="article-list-content__title">記事タイトル2</dt>
+                                        <dd class="article-list-content__leadtxt">
+                                            リード文2リード文2リード文2リード文2リード文2リード文2
+                                            リード文2リード文2リード文2リード文2リード文2
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </a>
+                            <a href="#" class="article-list-content-link">
+                                <li class="article-list-content__list">
+                                    <img src="img/blue_sky.jpg" alt="サムネイル" class="article-list-thumb">
+                                    <dl class="article-list-content">
+                                        <dt class="article-list-content__title">記事タイトル3</dt>
+                                        <dd class="article-list-content__leadtxt">
+                                            リード文3リード文3リード文3リード文3リード文3
+                                            リード文3リード文3リード文3リード文3リード文3リード文3
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </a>
+                            <a href="#" class="article-list-content-link">
+                                <li class="article-list-content__list">
+                                    <img src="img/blue_sky.jpg" alt="サムネイル" class="article-list-thumb">
+                                    <dl class="article-list-content">
+                                        <dt class="article-list-content__title">記事タイトル4</dt>
+                                        <dd class="article-list-content__leadtxt">
+                                            リード文4リード文4リード文4リード文4リード文4リード文4
+                                            リード文4リード文4リード文4リード文4リード文4
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </a>
+                            <a href="#" class="article-list-content-link">
+                                <li class="article-list-content__list">
+                                    <img src="img/blue_sky.jpg" alt="サムネイル" class="article-list-thumb">
+                                    <dl class="article-list-content">
+                                        <dt class="article-list-content__title">記事タイトル5</dt>
+                                        <dd class="article-list-content__leadtxt">
+                                            リード文5リード文5リード文5リード文5リード文5リード文5
+                                            リード文5リード文5リード文5リード文5リード文5
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </a>
+                        </ul>
+                    </section>
+                </section>
+            </main>
+
+            <!-- サイドメニュー -->
+            <aside class="side-menu">
+                <h1 class="side-menu-title">Menu</h1>
+                <section class="side-menu-content">
+                    <h2 class="side-menu-content-title">人気のある記事</h2>
+                    <ul class="popular-list clearfix">
+                        <li><a href="#">人気のある記事1</a></li>
+                        <li><a href="#">人気のある記事2</a></li>
+                        <li><a href="#">人気のある記事3</a></li>
+                        <li><a href="#">人気のある記事4</a></li>
+                        <li><a href="#">人気のある記事5</a></li>
+                        <li><a href="#">人気のある記事6</a></li>
+                    </ul>
+                </section>
+                <section class="side-menu-content">
+                    <h2 class="side-menu-content-title">カテゴリー</h2>
+                    <ul class="category-list clearfix">
+                        <li><a href="#">くらし</a></li>
+                        <li><a href="#">趣味</a></li>
+                        <li><a href="#">スポーツ</a></li>
+                        <li><a href="#">芸能</a></li>
+                        <li><a href="#">経済</a></li>
+                    </ul>
+                </section>
+                <section class="side-menu-content">
+                    <img src="img/hwt_basic_02.png" alt="">
+                </section>
+            </aside>
+            <!-- ページトップボタン -->
+            <div class="page-top">
+                ▲
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy;2019 R.Someya</p>
+        </footer>
+
+    <!-- javascriptは読み込みと同時に使わないので最後に読み込ませています。 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="sample.js"></script>
+</body>
+</html>

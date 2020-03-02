@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>HTML Sample</title>
+    <meta name="description" content="HTMLとCSSのサンプルサイトです。">
+    <meta name="keywords" content="HTML,CSS,javascript,HTMLの基本">
+    <meta name="author" content="Ryosuke Someya">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="content-warp">
+        <h1 class="heading page-title">HTML勉強会サンプル</h1>
+        <section class="content">
+            <h1 class="heading section-title">ブロック要素</h1>
+            <div class="block-box">
+                ブロック要素 box-1
+            </div>
+            <div class="block-box">
+                ブロック要素 box-2
+            </div>
+            <div class="block-box">
+                ブロック要素 box-3
+            </div>
+        </section>
+
+        <section class="content">
+            <h1 class="heading section-title">インライン要素</h1>
+            <p>例1) spanタグ</p>
+            <p class="content-text mb30">
+                Lorem ipsum dolor sit amet consectetur, <span class="green-bg">adipisicing elit. </span><span class="blue-bg">Exercitationem natus nobis</span> cum numquam cumque mollitia deleniti eaque quam velit, ea temporibus nihil pariatur. Quis, perferendis doloremque animi maxime alias earum.
+            </p>
+            <p>例2) imgタグ</p>
+            <div class="images">
+                <img src="https://cdn.vie.auone.jp/asset/ft-market/sp/img/howto/hwt_basic_02.png" alt="">
+                <img src="img/hwt_basic_02.png" alt="">
+            </div>
+        </section>
+
+        <section class="content">
+            <h1 class="heading section-title">使用頻度の高いタグ（一部）</h1>
+            <p> aタグ</p>
+            <p>
+                <a href="https://google.com" target="_blank">Go to Google</a>
+            </p>
+            <p>リスト</p>
+            <p>番号なしリスト</p>
+            <ul class="pattern">
+                <li>洗剤</li>
+                <li>たわし</li>
+                <li>洗濯バサミ</li>
+            </ul>
+            <p>番号ありリスト</p>
+            <ol class="pattern">
+                <li>カレー</li>
+                <li>ラーメン</li>
+                <li>やきそば</li>
+            </ol>
+        </section>
+
+        <section class="content">
+            <h1 class="heading section-title">相対パス(../)説明用サンプル</h1>
+            <div class="bg-img-box">
+
+            </div>
+        </section>
+
+        <div class="btn btn-blue">
+            <a href="./table.html">表組みへ</a>
+        </div>
+
+    </div><!-- content-warp end -->
+
+    <!-- javascriptは読み込みと同時に使わないので最後に読み込ませています。 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="sample.js"></script>
+</body>
+</html>
